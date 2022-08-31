@@ -1,0 +1,82 @@
+.gallery {
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+  background-color: black;
+  margin: 50px;
+  box-shadow: 10px 10px 1px 1px rgba(240, 240, 240, 0.3);
+}
+.gallery .singer {
+  border-radius: 5px;
+  background-color: rgba(239, 239, 237, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gallery .singer .image-box {
+  width: 300px;
+  height: 300px;
+}
+.gallery .singer .image-box img {
+  height: 100%;
+  width: 100%;
+}
+.gallery .singer h3 {
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+}
+
+.title {
+  margin-top: 100px;
+  transform: rotate(354deg);
+}
+.title p {
+  text-decoration: underline;
+  margin: 0;
+  font-size: 100px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 200;
+  color: rgb(4, 15, 7);
+  text-shadow: 5px 1px 1px rgb(4, 233, 253);
+  letter-spacing: 5px;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(216deg, #ff008b, #00ffdb);
+}
+
+.words {
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  max-width: 500px;
+  max-height: 160px;
+  background-color: rgb(83, 82, 82);
+  border-radius: 5px;
+  border: 3px solid rgb(193, 192, 192);
+  line-height: 1;
+  overflow: scroll;
+}
+.words::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  top: 0;
+  left: 30px;
+  border-color: transparent #efe4e4;
+}
+.words p {
+  font-size: 20px;
+  color: yellow;
+  text-shadow: 1px 1px 1px red;
+}
+
+/*# sourceMappingURL=style.css.map */

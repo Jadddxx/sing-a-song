@@ -1,0 +1,27 @@
+.words {
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  max-width: 500px;
+  max-height: 160px;
+  background-color: rgb(83, 82, 82);
+  border-radius: 5px;
+  border: 3px solid rgb(193, 192, 192);
+  line-height: 1;
+  overflow: scroll;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    top: 0;
+    left: 30px;
+    border-color: transparent #efe4e4;
+  }
+
+  p {
+    font-size: 20px;
+    color: yellow;
+    text-shadow: 1px 1px 1px red;
+  }
+}
