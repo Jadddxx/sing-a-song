@@ -3,15 +3,30 @@ window.SpeechRecognition =
 
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
-// recognition.lang = "en-US";
 recognition.start();
 
 let p = document.createElement("p");
 const word = document.querySelector(".words");
 word.appendChild(p);
 
-recognition.addEventListener("result", function (e) {
-  // *wes bos
+recognition.addEventListener("end", recognition.start);
+recognition.addEventListener("result", voiceHandler);
+
+function matchHandler(index) {
+  const audio = document.querySelector(`audio[data-item="${index}"]`);
+  const singer = document.querySelector(`.singer[data-item="${index}"]`);
+  const pause = document.querySelector(".pause");
+
+  singer.classList.add("playing");
+  audio.play();
+
+  pause.addEventListener("click", function (e) {
+    singer.classList.remove("playing");
+    audio.pause();
+  });
+}
+
+function voiceHandler(e) {
   const transcript = Array.from(e.results)
     .map((result) => result[0])
     .map((result) => result.transcript)
@@ -20,25 +35,20 @@ recognition.addEventListener("result", function (e) {
   // *me
   // const transcript = e.results[0][0].transcript;
 
-  const loveStory = document.querySelector(`.singer[data-item="0"]`);
-  const girlfriend = document.querySelector(`.singer[data-item="1"]`);
-  const sparksfly = document.querySelector(`.singer[data-item="2"]`);
-  const haunted = document.querySelector(`.singer[data-item="3"]`);
-
   if (transcript.includes("Love Story")) {
-    loveStory.style.backgroundColor = "red";
+    matchHandler(0);
   }
 
-  if (transcript.includes("hey hey you you")) {
-    girlfriend.style.backgroundColor = "pink";
+  if (transcript.includes("girlfriend")) {
+    matchHandler(1);
   }
 
-  if (transcript.includes("drop everything now")) {
-    sparksfly.style.backgroundColor = "blue";
+  if (transcript.includes("sparks fly")) {
+    matchHandler(2);
   }
 
-  if (transcript.includes("come on come on")) {
-    haunted.style.backgroundColor = "brown";
+  if (transcript.includes("haunted")) {
+    matchHandler(3);
   }
 
   if (e.results[0].isFinal) {
@@ -48,6 +58,4 @@ recognition.addEventListener("result", function (e) {
 
   console.log(transcript);
   p.innerHTML = transcript;
-});
-
-recognition.addEventListener("end", recognition.start);
+}

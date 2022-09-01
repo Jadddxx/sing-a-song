@@ -1,14 +1,24 @@
 .gallery {
   padding: 50px;
-  border-radius: 10px;
-  display: flex;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 300px;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   gap: 20px;
   background: linear-gradient(216deg, #ff008b, #00ffdb);
-  margin: 50px;
-  box-shadow: 10px 10px 7px 5px rgba(197, 194, 194, 0.3);
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: 300px 300px;
+  }
+}
+@media (min-width: 1400px) {
+  .gallery {
+    grid-template-columns: 300px 300px 300px 300px;
+  }
 }
 .gallery .singer {
   border-radius: 5px;
@@ -17,13 +27,29 @@
   flex-direction: column;
   gap: 10px;
 }
-.gallery .singer .image-box {
-  width: 300px;
+.gallery .singer:first-child .image-box {
+  background-image: url("/image/Taylor-Swift-1.jpeg");
+  background-position: center;
+  background-size: cover;
   height: 300px;
 }
-.gallery .singer .image-box img {
-  height: 100%;
-  width: 100%;
+.gallery .singer:nth-child(2) .image-box {
+  background-image: url("/image/girlfriend.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+.gallery .singer:nth-child(3) .image-box {
+  background-image: url("/image/sparksfly.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+.gallery .singer:last-child .image-box {
+  background-image: url("/image/haunted.jpeg");
+  background-position: right center;
+  background-size: cover;
+  height: 300px;
 }
 .gallery .singer h3 {
   text-align: center;
@@ -31,14 +57,27 @@
   color: white;
 }
 
+.pause {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+.pause:active {
+  transform: translate(1px, 1px);
+}
+.pause i {
+  font-size: 40px;
+  color: #af0161;
+}
+
 .title {
-  margin-top: 100px;
+  margin: 100px;
   transform: rotate(354deg);
 }
 .title p {
   text-decoration: underline;
   margin: 0;
-  font-size: 100px;
+  font-size: 60px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
@@ -50,7 +89,7 @@
 body {
   height: 100vh;
   margin: 0;
-  background-color: rgb(238, 235, 235);
+  background-color: rgb(228, 215, 215);
 }
 
 .words {
@@ -61,7 +100,7 @@ body {
   max-height: 160px;
   background: linear-gradient(216deg, #ff008b, #00ffdb);
   border-radius: 5px;
-  border: 3px solid rgb(193, 192, 192);
+  border: 2px solid rgb(150, 150, 150);
   line-height: 1;
   overflow: scroll;
 }
@@ -74,9 +113,16 @@ body {
   border-color: transparent #efe4e4;
 }
 .words p {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  color: yellow;
-  text-shadow: 1px 1px 1px red;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: rgb(4, 4, 4);
+  text-shadow: 1px 1px 1px rgb(251, 252, 253);
+}
+
+.singer.playing {
+  background-color: rgb(191, 95, 162);
 }
 
 /*# sourceMappingURL=style.css.map */
