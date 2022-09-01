@@ -29,7 +29,7 @@
 
     &:first-child {
       .image-box {
-        background-image: url("/image/Taylor-Swift-1.jpeg");
+        background-image: url("../image/Taylor-Swift-1.jpeg");
         background-position: center;
         background-size: cover;
         height: 300px;
@@ -38,7 +38,7 @@
 
     &:nth-child(2) {
       .image-box {
-        background-image: url("/image/girlfriend.jpeg");
+        background-image: url("../image/girlfriend.jpeg");
         background-position: center;
         background-size: cover;
         height: 300px;
@@ -47,7 +47,7 @@
 
     &:nth-child(3) {
       .image-box {
-        background-image: url("/image/sparksfly.jpeg");
+        background-image: url("../image/sparksfly.jpeg");
         background-position: center;
         background-size: cover;
         height: 300px;
@@ -56,7 +56,7 @@
 
     &:last-child {
       .image-box {
-        background-image: url("/image/haunted.jpeg");
+        background-image: url("../image/haunted.jpeg");
         background-position: right center;
         background-size: cover;
         height: 300px;
