@@ -92,6 +92,10 @@ body {
   background-color: rgb(228, 215, 215);
 }
 
+.container {
+  padding-bottom: 100px;
+}
+
 .words {
   margin: 0 auto;
   padding: 30px;
