@@ -2,7 +2,7 @@
   padding: 50px;
   margin: 50px;
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 200px;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -12,12 +12,12 @@
 }
 @media (min-width: 768px) {
   .gallery {
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 200px 200px;
   }
 }
 @media (min-width: 1400px) {
   .gallery {
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-columns: 200px 200px 200px 200px;
   }
 }
 .gallery .singer {
@@ -31,25 +31,25 @@
   background-image: url("../image/Taylor-Swift-1.jpeg");
   background-position: center;
   background-size: cover;
-  height: 300px;
+  height: 200px;
 }
 .gallery .singer:nth-child(2) .image-box {
   background-image: url("../image/girlfriend.jpeg");
   background-position: center;
   background-size: cover;
-  height: 300px;
+  height: 200px;
 }
 .gallery .singer:nth-child(3) .image-box {
   background-image: url("../image/sparksfly.jpeg");
   background-position: center;
   background-size: cover;
-  height: 300px;
+  height: 200px;
 }
 .gallery .singer:last-child .image-box {
   background-image: url("../image/haunted.jpeg");
   background-position: right center;
   background-size: cover;
-  height: 300px;
+  height: 200px;
 }
 .gallery .singer h3 {
   text-align: center;
