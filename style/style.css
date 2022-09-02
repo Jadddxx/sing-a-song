@@ -7,7 +7,8 @@
   align-items: center;
   gap: 30px;
   background: linear-gradient(216deg, #ff008b, #00ffdb);
-  border: 2px solid rgb(150, 150, 150);
+  box-shadow: 1px 1px 20px rgb(150, 150, 150);
+  border: 1.1px solid rgb(37, 37, 37);
   border-radius: 10px;
 }
 @media (min-width: 768px) {
@@ -27,6 +28,7 @@
   flex-direction: column;
   gap: 10px;
   opacity: 0.8;
+  transition: 0.4s;
 }
 .gallery .singer:first-child .image-box {
   background-image: url("../image/Taylor-Swift-1.jpeg");
@@ -72,7 +74,7 @@
 }
 
 .title {
-  margin: 100px;
+  margin: 0 0 100px 0;
   transform: rotate(354deg);
 }
 .title p {
@@ -90,11 +92,11 @@
 body {
   height: 100vh;
   margin: 0;
-  background-color: rgb(228, 215, 215);
+  background-color: rgb(202, 202, 202);
 }
 
 .container {
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 
 .words {
@@ -105,7 +107,8 @@ body {
   max-height: 160px;
   background: linear-gradient(216deg, #ff008b, #00ffdb);
   border-radius: 5px;
-  border: 2px solid rgb(150, 150, 150);
+  box-shadow: 1px 1px 10px rgb(150, 150, 150);
+  border: 1.1px solid rgb(37, 37, 37);
   line-height: 1;
   overflow: scroll;
 }
@@ -128,7 +131,7 @@ body {
 
 .singer.playing {
   background-color: rgb(191, 95, 162);
-  box-shadow: 1px 1px 20px white;
+  box-shadow: 1px 1px 20px black;
   transform: scale(1.1);
   transition: 0.4s;
   opacity: 1;
